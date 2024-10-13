@@ -1,2 +1,4 @@
-package com.antonsantalov;public class PhoneBook {
+package com.antonsantalov;
+
+public class PhoneBook {
 }
