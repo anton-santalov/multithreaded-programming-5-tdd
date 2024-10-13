@@ -20,4 +20,8 @@ public class PhoneBook {
     public String findByName(String nickname) {
         return contacts.get(nickname);
     }
+
+    public String printAllNames() {
+        return null;
+    }
 }

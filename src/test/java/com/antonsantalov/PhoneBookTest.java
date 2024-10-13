@@ -98,4 +98,24 @@ class PhoneBookTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void printAllNamesEmpty() {
+        PhoneBook phoneBook = new PhoneBook();
+        String actual = phoneBook.printAllNames();
+
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    void printAllNames() {
+        String expected = "John Doe, Jane Doe";
+
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "1234567891011");
+        phoneBook.add("Jane Doe", "1234567891012");
+        String actual = phoneBook.printAllNames();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
