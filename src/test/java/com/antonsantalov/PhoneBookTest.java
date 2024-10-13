@@ -67,4 +67,35 @@ class PhoneBookTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findByNameInEmptyPhoneBook() {
+        PhoneBook phoneBook = new PhoneBook();
+        String actual = phoneBook.findByName("John Doe");
+
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    void findByNameInPhoneBookWithOneName() {
+        String expected = "1234567891011";
+
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "1234567891011");
+        String actual = phoneBook.findByName("John Doe");
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void findByNameInPhoneBookWithMultipleNames() {
+        String expected = "1234567891011";
+
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "1234567891011");
+        phoneBook.add("Jane Doe", "1234567891012");
+        String actual = phoneBook.findByName("John Doe");
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
