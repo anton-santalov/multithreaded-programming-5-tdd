@@ -18,6 +18,6 @@ public class PhoneBook {
     }
 
     public String findByName(String nickname) {
-        return null;
+        return contacts.get(nickname);
     }
 }
