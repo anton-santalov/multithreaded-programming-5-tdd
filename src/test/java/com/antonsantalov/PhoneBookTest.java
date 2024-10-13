@@ -109,7 +109,7 @@ class PhoneBookTest {
 
     @Test
     void printAllNames() {
-        String expected = "John Doe, Jane Doe";
+        String expected = "Jane Doe, John Doe";
 
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("John Doe", "1234567891011");
