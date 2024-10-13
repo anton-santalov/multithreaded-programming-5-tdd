@@ -12,4 +12,8 @@ public class PhoneBook {
         reversedContacts.put(phoneNumber, nickname);
         return contacts.size();
     }
+
+    public String findByNumber(String phoneNumber) {
+        return null;
+    }
 }

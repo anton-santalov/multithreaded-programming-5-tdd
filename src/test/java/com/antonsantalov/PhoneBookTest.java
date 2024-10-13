@@ -36,4 +36,35 @@ class PhoneBookTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findByNumberInEmptyPhoneBook() {
+        PhoneBook phoneBook = new PhoneBook();
+        String actual = phoneBook.findByNumber("1234567891011");
+
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    void findByNumberInPhoneBookWithOnePhoneNumber() {
+        String expected = "John Doe";
+
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "1234567891011");
+        String actual = phoneBook.findByNumber("1234567891011");
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void findByNumberInPhoneBookWithMultiplePhoneNumbers() {
+        String expected = "John Doe";
+
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John Doe", "1234567891011");
+        phoneBook.add("Jane Doe", "1234567891012");
+        String actual = phoneBook.findByNumber("1234567891011");
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
