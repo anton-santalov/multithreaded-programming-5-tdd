@@ -22,6 +22,10 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        if (contacts.isEmpty()) {
+            return null;
+        } else {
+            return String.join(", ", contacts.keySet());
+        }
     }
 }
